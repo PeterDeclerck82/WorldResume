@@ -23,9 +23,9 @@ namespace WorldResume
         {
             app.UseDefaultFiles();  //gaat op zoek naar een standaard html-pagina zoals index.html
             
-            app.UseStaticFiles();   
+            app.UseStaticFiles();
 
-            
+            app.UseNodeModules();
             
         }
     }
