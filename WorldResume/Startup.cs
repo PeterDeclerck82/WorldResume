@@ -30,7 +30,7 @@ namespace WorldResume
             }
             else
             {
-                // Add Error Page
+                app.UseExceptionHandler("/error");
             }
             
 
