@@ -33,11 +33,9 @@ namespace WorldResume.Controllers
             if (ModelState.IsValid)
             {
                 // Send the email
+                _mailService.SendMail("peter@declerck.com", model.Subject, $"From: {model.Name} - {model.Email}, Message: {model.Message}");
             }
-            else
-            {
-                // Show the errors
-            }
+
 
             return View();
 
