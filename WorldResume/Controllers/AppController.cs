@@ -11,11 +11,15 @@ namespace WorldResume.Controllers
     public class AppController : Controller
     {
         // GET: /<controller>/
+
+
         public IActionResult Index()
         {
             return View();
         }
 
+
+        [HttpGet("contact")]
         public IActionResult Contact()
         {
             ViewBag.Title = "Contact us";
@@ -24,6 +28,8 @@ namespace WorldResume.Controllers
             return View();
         }
 
+
+        [HttpGet("about")]
         public IActionResult About()
         {
             ViewBag.Title = "About us";
