@@ -3,8 +3,10 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
-    "jquery": "3.5.0",
-    "bootstrap": "4.3.1"
+    "jquery": "3.5.1",
+    "jquery-validation": "1.19.2",
+    "jquery-validation-unobtrusive": "3.2.11",
+    "bootstrap": "5.0.0-alpha1"
   },
   "devDependencies": {
   }
