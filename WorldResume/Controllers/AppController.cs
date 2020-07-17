@@ -22,8 +22,13 @@ namespace WorldResume.Controllers
         [HttpGet("contact")]
         public IActionResult Contact()
         {
-            ViewBag.Title = "Contact us";
 
+
+            return View();
+        }
+        [HttpPost("contact")]
+        public IActionResult Contact(object model)
+        {
 
             return View();
         }
@@ -32,8 +37,6 @@ namespace WorldResume.Controllers
         [HttpGet("about")]
         public IActionResult About()
         {
-            ViewBag.Title = "About us";
-
 
             return View();
         }

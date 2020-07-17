@@ -1,1 +1,27 @@
-﻿<h2>@ViewBag.Title</h2>
+﻿@{
+    ViewBag.Title = "Contact us";
+}
+
+<form method="post">
+    <label>Username: </label>
+    <br />
+    <input name="name" />
+    <br />
+
+    <label>Email: </label>
+    <br />
+    <input name="email" type="email" />
+    <br />
+
+    <label>Subject: </label>
+    <br />
+    <input name="subject" type="text" />
+    <br />
+
+    <label>Message: </label>
+    <br />
+    <textarea rows="4" name="message"></textarea>
+    <br />
+    <input type="submit" value="Send message" />
+
+</form>
