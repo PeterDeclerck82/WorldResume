@@ -10,6 +10,7 @@
     "jquery-validation-unobtrusive": "^3.2.11",
     "jquery-validation-globalize-fix": "^0.1.1",
     "globalize": "^1.4.0",
-    "cldrjs": "^0.5.0"
+    "cldrjs": "^0.5.0",
+    "font-awesome": "^4.7.0"
   }
 }
