@@ -2,76 +2,86 @@
     ViewBag.Title = "Home Page";
 }
 
+<div class="row">
+    <div class="col-md-9">
 
-<div class="product-info">
-        <img src="~/img/China.png" />
-        <h3>China</h3>
-        <ul class="product-props">
-            <li>population: 1 379 302 771           </li>
-            <li>continent:  Asia                    </li>
-            <li>capital:    Beijing                 </li>
-            <li>languages:  Standard Chinese        </li>
-            <li>surface:    9 596 961 km2           </li>
-            <li>currency:   Chinese yuan ¥ or 元 (CNY)        </li>
-        </ul>
-        <br />
-        <img src="~/img/ChinaShape.PNG" />
-        <br />
-        <button id="addButton" class="btn btn-success">Add to collection</button>
-        <br />
-        <br />
-</div>
-
-<div id="theForm">
-        <form>
-            <label>Username: </label>
+        <div class="product-info">
+            <img src="~/img/China.png" />
+            <h3>China</h3>
+            <ul class="product-props">
+                <li>population: 1 379 302 771           </li>
+                <li>continent:  Asia                    </li>
+                <li>capital:    Beijing                 </li>
+                <li>languages:  Standard Chinese        </li>
+                <li>surface:    9 596 961 km2           </li>
+                <li>currency:   Chinese yuan ¥ or 元 (CNY)        </li>
+            </ul>
             <br />
-            <input />
+            <img src="~/img/ChinaShape.PNG" />
             <br />
-
-            <label>Email: </label>
+            <button id="addButton" class="btn btn-success">Add to collection</button>
             <br />
-            <input type="email" />
             <br />
+        </div>
 
-            <label>Subject: </label>
-            <br />
-            <input type="text" />
-            <br />
-
-            <label>Message: </label>
-            <br />
-            <textarea rows="4"></textarea>
-            <br />
-
-            <input type="submit" value="Send message" />
-
-        </form>
-</div>
-
-<div>
-        <div id="loginToggle">Login (click to hide/show)</div>
-        <form class="popup-form">
-
-            <div>
-                <label>Username</label>
+        <div id="theForm">
+            <form>
+                <label>Username: </label>
+                <br />
                 <input />
-            </div>
-            <br />
-            <div>
-                <label>Password</label>
-                <input type="password" />
-            </div>
-            <br />
-            <div>
-                <input type="checkbox" />
-                <label>Remember me?</label>
-            </div>
-            <br />
-            <div>
-                <input type="submit" value="Login" />
-            </div>
+                <br />
+
+                <label>Email: </label>
+                <br />
+                <input type="email" />
+                <br />
+
+                <label>Subject: </label>
+                <br />
+                <input type="text" />
+                <br />
+
+                <label>Message: </label>
+                <br />
+                <textarea rows="4"></textarea>
+                <br />
+
+                <input type="submit" value="Send message" />
+
+            </form>
+        </div>
+
+        <div>
+            <div id="loginToggle">Login (click to hide/show)</div>
+            <form class="popup-form">
+
+                <div>
+                    <label>Username</label>
+                    <input />
+                </div>
+                <br />
+                <div>
+                    <label>Password</label>
+                    <input type="password" />
+                </div>
+                <br />
+                <div>
+                    <input type="checkbox" />
+                    <label>Remember me?</label>
+                </div>
+                <br />
+                <div>
+                    <input type="submit" value="Login" />
+                </div>
 
 
-        </form>
+            </form>
+        </div>
+
+    </div>
+
+    <div class="col-md-3">
+        <p>This is a site where you can collect your favoutite countries as cards of the entire world</p>
+    </div>
+
 </div>
