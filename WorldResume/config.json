@@ -1,0 +1,10 @@
+{
+  "Data": {
+    "Favorite": "blue"
+  },
+
+  "ConnectionStrings": {
+    "WorldConnectionString":  "server=(localdb)\\MSSQLLocalDB; Database=WorldResumeDb; Integraded Security=true; MultipleActiveResultSets=true;"
+  }
+
+}

@@ -3,85 +3,128 @@
 }
 
 <div class="row">
-    <div class="col-md-9">
+    <div class="col-md-12">
+        <div class="card-deck">
+            <div class="card col-md-4 ">
+                <img class="card-img-top m-2" src="~/img/China.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">China</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">population: <span class="float-right">1 379 302 771     </span>      </li>
+                    <li class="list-group-item">continent:  <span class="float-right">Asia              </span>      </li>
+                    <li class="list-group-item">capital:    <span class="float-right">Beijing           </span>      </li>
+                    <li class="list-group-item">languages:  <span class="float-right">Standard Chinese  </span>      </li>
+                    <li class="list-group-item">surface:    <span class="float-right">9 596 961 km2     </span>      </li>
+                    <li class="list-group-item">currency:   <span class="float-right">Chinese yuan ¥ or 元 (CNY)</span></li>
+                </ul>
+                <img class="card-img-top" src="~/img/ChinaShape.PNG" alt="Card image cap">
+                <div class="card-body">
+                    <button id="addButton" class="btn btn-success">Add to collection</button>
+                </div>
 
-        <div class="product-info">
-            <img src="~/img/China.png" />
-            <h3>China</h3>
-            <ul class="product-props">
-                <li>population: 1 379 302 771           </li>
-                <li>continent:  Asia                    </li>
-                <li>capital:    Beijing                 </li>
-                <li>languages:  Standard Chinese        </li>
-                <li>surface:    9 596 961 km2           </li>
-                <li>currency:   Chinese yuan ¥ or 元 (CNY)        </li>
-            </ul>
-            <br />
-            <img src="~/img/ChinaShape.PNG" />
-            <br />
-            <button id="addButton" class="btn btn-success">Add to collection</button>
-            <br />
-            <br />
+            </div>
+
+            <div class="card col-md-4 ">
+                <img class="card-img-top m-2" src="~/img/USA.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">USA</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">population: <span class="float-right">326 625 791     </span>      </li>
+                    <li class="list-group-item">continent:  <span class="float-right">North America              </span>      </li>
+                    <li class="list-group-item">capital:    <span class="float-right">Washington, D.C.           </span>      </li>
+                    <li class="list-group-item">languages:  <span class="float-right">English  </span>      </li>
+                    <li class="list-group-item">surface:    <span class="float-right">9 826 675 km2     </span>      </li>
+                    <li class="list-group-item">currency:   <span class="float-right">United States dollar $ (USD)</span></li>
+                </ul>
+                <img class="card-img-top" src="~/img/USAShape.PNG" alt="Card image cap">
+                <div class="card-body">
+                    <button id="addButton" class="btn btn-success">Add to collection</button>
+                </div>
+
+            </div>
+
+            <div class="card col-md-4 ">
+                <img class="card-img-top m-2" src="~/img/Belgium.png" alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">Belgium</h5>
+                </div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item">population: <span class="float-right">11 491 346     </span>      </li>
+                    <li class="list-group-item">continent:  <span class="float-right">Europe              </span>      </li>
+                    <li class="list-group-item">capital:    <span class="float-right">Brussels           </span>      </li>
+                    <li class="list-group-item">languages:  <span class="float-right">Dutch, French, German  </span>      </li>
+                    <li class="list-group-item">surface:    <span class="float-right">30 528 km2     </span>      </li>
+                    <li class="list-group-item">currency:   <span class="float-right">Euro € (EUR)</span></li>
+                </ul>
+                <img class="card-img-top" src="~/img/BelgiumShape.png" alt="Card image cap">
+                <div class="card-body">
+                    <button id="addButton" class="btn btn-success">Add to collection</button>
+                </div>
+
+            </div>
         </div>
 
-        <div id="theForm">
-            <form>
-                <label>Username: </label>
-                <br />
-                <input />
-                <br />
 
-                <label>Email: </label>
-                <br />
-                <input type="email" />
-                <br />
 
-                <label>Subject: </label>
-                <br />
-                <input type="text" />
-                <br />
+    </div>
 
-                <label>Message: </label>
-                <br />
-                <textarea rows="4"></textarea>
-                <br />
 
-                <input type="submit" value="Send message" />
 
-            </form>
-        </div>
+
+</div>
+
+<div id="theForm">
+    <form>
+        <label>Username: </label>
+        <br />
+        <input />
+        <br />
+
+        <label>Email: </label>
+        <br />
+        <input type="email" />
+        <br />
+
+        <label>Subject: </label>
+        <br />
+        <input type="text" />
+        <br />
+
+        <label>Message: </label>
+        <br />
+        <textarea rows="4"></textarea>
+        <br />
+
+        <input type="submit" value="Send message" />
+
+    </form>
+</div>
+
+<div>
+    <div id="loginToggle">Login (click to hide/show)</div>
+    <form class="popup-form">
 
         <div>
-            <div id="loginToggle">Login (click to hide/show)</div>
-            <form class="popup-form">
-
-                <div>
-                    <label>Username</label>
-                    <input />
-                </div>
-                <br />
-                <div>
-                    <label>Password</label>
-                    <input type="password" />
-                </div>
-                <br />
-                <div>
-                    <input type="checkbox" />
-                    <label>Remember me?</label>
-                </div>
-                <br />
-                <div>
-                    <input type="submit" value="Login" />
-                </div>
-
-
-            </form>
+            <label>Username</label>
+            <input />
+        </div>
+        <br />
+        <div>
+            <label>Password</label>
+            <input type="password" />
+        </div>
+        <br />
+        <div>
+            <input type="checkbox" />
+            <label>Remember me?</label>
+        </div>
+        <br />
+        <div>
+            <input type="submit" value="Login" />
         </div>
 
-    </div>
 
-    <div class="col-md-3">
-        <p>This is a site where you can collect your favoutite countries as cards of the entire world</p>
-    </div>
-
+    </form>
 </div>
