@@ -9,6 +9,8 @@ namespace WorldResume.Models
     {
         public int CountryId { get; set; }
 
+        public string Name { get; set; }
+        public string Population { get; set; }
         public string FlagImageUrl { get; set; }
         public string Capital { get; set; }
         public string Languages { get; set; }
