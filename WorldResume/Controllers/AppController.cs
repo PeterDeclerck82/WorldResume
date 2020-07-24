@@ -25,7 +25,7 @@ namespace WorldResume.Controllers
 
 
         // GET: /<controller>/
-        public IActionResult List()
+        public IActionResult Index()
         {
 
             //return View(_pieRepository.AllPies);
@@ -35,10 +35,10 @@ namespace WorldResume.Controllers
             countriesListViewModel.CurrentCategory = "Europe";
             return View(countriesListViewModel);
         }
-        public IActionResult Index()
-        {
-            return View();
-        }
+        //public IActionResult Index()
+        //{
+        //    return View();
+        //}
 
 
         [HttpGet("contact")]
