@@ -5,13 +5,14 @@
 @model CountriesListViewModel
 
 <div class="row">
-    <div class="col-md-12">
+    <div class="col-12">
         <div class="card-deck small">
 
             @foreach (var country in Model.Countries)
             {
-                <div class="card col-md-3 ">
-                    <img class="card-img-top m-2" src="@country.FlagImageUrl" alt="Card image cap">
+
+                <div class="card">
+                    <img class="card-img-top" src="@country.FlagImageUrl" alt="Card image cap">
                     <div class="card-header">
                         <h5 class="card-title">@country.Name</h5>
                     </div>
@@ -21,9 +22,9 @@
                             <li class="list-group-item ">population: <br />  @country.Population              </li>
                             <li class="list-group-item">continent: <br />    @country.Continent.ContinentName </li>
                             <li class="list-group-item">capital: <br />      @country.Capital                 </li>
-                            <li class="list-group-item">languages: <br />     @country.Languages               </li>
+                            <li class="list-group-item">languages: <br />    @country.Languages               </li>
                             <li class="list-group-item">surface: <br />      @country.Surface                 </li>
-                            <li class="list-group-item">currency: <br />      @country.Currency                </li>
+                            <li class="list-group-item">currency: <br />     @country.Currency                </li>
                         </ul>
 
                     </div> 
@@ -32,78 +33,13 @@
                         <img class="card-img-top" src="@country.CountryImageUrl" alt="Card image cap">
                     </div>   
 
-                    <div class="footer">
+                    <div class="footer m-4" >
                         <button id="addButton" class="btn btn-success">Add to collection</button>
                     </div>
                     
-
                 </div>
             }
-            
-
-            @*<div class="card col-md-3 ">
-                <img class="card-img-top m-2" src="~/img/USA.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">USA</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">population: <span class="float-right">326 625 791     </span>      </li>
-                    <li class="list-group-item">continent:  <span class="float-right">North America              </span>      </li>
-                    <li class="list-group-item">capital:    <span class="float-right">Washington, D.C.           </span>      </li>
-                    <li class="list-group-item">languages:  <span class="float-right">English  </span>      </li>
-                    <li class="list-group-item">surface:    <span class="float-right">9 826 675 km2     </span>      </li>
-                    <li class="list-group-item">currency:   <span class="float-right">United States dollar $ (USD)</span></li>
-                </ul>
-                <img class="card-img-top" src="~/img/USAShape.PNG" alt="Card image cap">
-                <div class="card-body">
-                    <button id="addButton" class="btn btn-success">Add to collection</button>
-                </div>
-
-            </div>
-
-            <div class="card col-md-3 ">
-                <img class="card-img-top m-2" src="~/img/USA.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">USA</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">population: <span class="float-right">326 625 791     </span>      </li>
-                    <li class="list-group-item">continent:  <span class="float-right">North America              </span>      </li>
-                    <li class="list-group-item">capital:    <span class="float-right">Washington, D.C.           </span>      </li>
-                    <li class="list-group-item">languages:  <span class="float-right">English  </span>      </li>
-                    <li class="list-group-item">surface:    <span class="float-right">9 826 675 km2     </span>      </li>
-                    <li class="list-group-item">currency:   <span class="float-right">United States dollar $ (USD)</span></li>
-                </ul>
-                <img class="card-img-top" src="~/img/USAShape.PNG" alt="Card image cap">
-                <div class="card-body">
-                    <button id="addButton" class="btn btn-success">Add to collection</button>
-                </div>
-
-            </div>
-
-            <div class="card col-md-3 ">
-                <img class="card-img-top m-2" src="~/img/Belgium.png" alt="Card image cap">
-                <div class="card-body">
-                    <h5 class="card-title">Belgium</h5>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">population: <span class="float-right">11 491 346     </span>      </li>
-                    <li class="list-group-item">continent:  <span class="float-right">Europe              </span>      </li>
-                    <li class="list-group-item">capital:    <span class="float-right">Brussels           </span>      </li>
-                    <li class="list-group-item">languages:  <span class="float-right">Dutch, French, German  </span>      </li>
-                    <li class="list-group-item">surface:    <span class="float-right">30 528 km2     </span>      </li>
-                    <li class="list-group-item">currency:   <span class="float-right">Euro € (EUR)</span></li>
-                </ul>
-                <img class="card-img-top" src="~/img/BelgiumShape.png" alt="Card image cap">
-                <div class="card-body">
-                    <button id="addButton" class="btn btn-success">Add to collection</button>
-                </div>
-
-            </div>*@
         </div>
-
-
-
     </div>
 
 
