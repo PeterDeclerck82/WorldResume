@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using WorldResume.Models;
 using WorldResume.ViewModels;
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -13,7 +14,27 @@ namespace WorldResume.Controllers
     {
         // GET: /<controller>/
 
+        private readonly ICountryRepository _countryRepository;
+        private readonly IContinentRepository _continentRepository;
 
+        public AppController(ICountryRepository countryRepository, IContinentRepository continentRepository)
+        {
+            _countryRepository      = countryRepository;
+            _continentRepository    = continentRepository;
+        }
+
+
+        // GET: /<controller>/
+        public IActionResult List()
+        {
+
+            //return View(_pieRepository.AllPies);
+            CountriesListViewModel countriesListViewModel = new CountriesListViewModel();
+            countriesListViewModel.Countries= _countryRepository.AllCountries;
+
+            countriesListViewModel.CurrentCategory = "Europe";
+            return View(countriesListViewModel);
+        }
         public IActionResult Index()
         {
             return View();

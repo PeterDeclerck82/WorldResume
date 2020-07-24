@@ -10,6 +10,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WorldResume.Data;
+using WorldResume.Models;
 
 namespace WorldResume
 {
@@ -27,8 +28,11 @@ namespace WorldResume
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<ICountryRepository,      MockCountryRepository>();
+            services.AddScoped<IContinentRepository,    MockContinentRepository>();
+            //services.AddTransient()
+            //services.AddSingleton()
 
-            //services.AddTransient<>
             services.AddControllersWithViews(); //implementeren mvc model
 
             services.AddDbContext<WorldContext>(cfg =>
@@ -36,6 +40,7 @@ namespace WorldResume
                 cfg.UseSqlServer(_config.GetConnectionString("WorldConnectionString"));
             });
         }
+
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)

@@ -21,6 +21,8 @@ namespace WorldResume.Models
             };
 
         public IEnumerable<Country> CountriesOfTheWeek { get; }
+
+
         public Country GetCountryById(int countryId)
         {
             return AllCountries.FirstOrDefault(p => p.CountryId == countryId);
