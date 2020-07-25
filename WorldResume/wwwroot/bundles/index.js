@@ -31,4 +31,5 @@
         $popupForm.fadeToggle(500);                //als het zichtbaar is, uit; en omgekeerd
     });
 
+
 });
