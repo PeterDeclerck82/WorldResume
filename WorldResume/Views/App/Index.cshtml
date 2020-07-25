@@ -10,25 +10,25 @@
 
         @foreach (var country in Model.Countries)
         {
-        <div                class="col-lg-3 col-md-6 mb-4">
-            <div            class="card h-100">                
-                <img        class="card-img-top p-2" src="@country.FlagImageUrl" alt="Card image cap">                
-                <div        class="card-body">
-                    <h5     class="card-title">@country.Name</h5>
-                    <p      class="card-text">
-                        <ul class="list-group list-group-flush">
-                            <li class="list-group-item">population:  <br>  @country.Population              </li>
-                            <li class="list-group-item">continent:   <br>  @country.Continent.ContinentName </li>
-                            <li class="list-group-item">capital:     <br>  @country.Capital                 </li>
-                            <li class="list-group-item">languages:   <br>  @country.Languages               </li>
-                            <li class="list-group-item">surface:     <br>  @country.Surface                 </li>
-                            <li class="list-group-item">currency:    <br>  @country.Currency                </li>
+        <div                    class="col-lg-3 col-md-6 mb-4">
+            <div                class="card h-100 text-white bg-dark mb-3" style="border-radius: 30px;">                
+                <img            class="card-img-top p-2" src="@country.FlagImageUrl" alt="Card image cap">                
+                <div            class="card-body">
+                    <h5         class="card-title">@country.Name</h5>
+                    <p          class="card-text">
+                        <ul     class="list-group list-group-flush text-white bg-dark mb-3">
+                            <li class="list-group-item text-white bg-dark mb-3">population:  <br>  @country.Population              </li>
+                            <li class="list-group-item text-white bg-dark mb-3">continent:   <br>  @country.Continent.ContinentName </li>
+                            <li class="list-group-item text-white bg-dark mb-3">capital:     <br>  @country.Capital                 </li>
+                            <li class="list-group-item text-white bg-dark mb-3">languages:   <br>  @country.Languages               </li>
+                            <li class="list-group-item text-white bg-dark mb-3">surface:     <br>  @country.Surface                 </li>
+                            <li class="list-group-item text-white bg-dark mb-3">currency:    <br>  @country.Currency                </li>
                         </ul>
                     </p>
-                    <img    class="card-img-bottom" src="@country.CountryImageUrl" alt="Card image cap">                   
+                    <img        class="card-img-bottom" src="@country.CountryImageUrl" alt="Card image cap">                   
                 </div>
-                <div        class="card-footer m-4">
-                    <button id="addButton" class="btn btn-success">Add to collection</button>
+                <div            class="card-footer">
+                    <button     class="btn btn-success" id="addButton" >Add to collection</button>
                 </div>
             </div>
         </div>
