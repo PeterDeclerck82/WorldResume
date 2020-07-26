@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using WorldResume.Data;
 using WorldResume.Models;
 
 namespace WorldResume
@@ -17,28 +16,27 @@ namespace WorldResume
     public class Startup
     {
 
-        private readonly IConfiguration _config;
+        private IConfiguration Configuration { get; }
 
-        public Startup(IConfiguration config)
+        public Startup(IConfiguration configuration)
         {
-            _config = config;
+            Configuration = configuration;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
+            
             services.AddScoped<ICountryRepository,      MockCountryRepository>();
             services.AddScoped<IContinentRepository,    MockContinentRepository>();
-            //services.AddTransient()
-            //services.AddSingleton()
-
             services.AddControllersWithViews(); //implementeren mvc model
 
-            services.AddDbContext<WorldContext>(cfg =>
-            {
-                cfg.UseSqlServer(_config.GetConnectionString("WorldConnectionString"));
-            });
+            
         }
 
 
