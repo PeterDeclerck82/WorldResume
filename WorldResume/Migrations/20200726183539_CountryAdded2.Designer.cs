@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WorldResume.Models;
 
 namespace WorldResume.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20200726183539_CountryAdded2")]
+    partial class CountryAdded2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -61,7 +63,12 @@ namespace WorldResume.Migrations
                         new
                         {
                             ContinentId = 6,
-                            ContinentName = "Oceania"
+                            ContinentName = "Antarctica"
+                        },
+                        new
+                        {
+                            ContinentId = 7,
+                            ContinentName = "Australia"
                         });
                 });
 
@@ -155,7 +162,7 @@ namespace WorldResume.Migrations
                         {
                             CountryId = 4,
                             Capital = "Canberra",
-                            ContinentId = 6,
+                            ContinentId = 7,
                             CountryImageUrl = "https://www.jetpunk.com/img/user-photo-library/ae/ae315bf299-235.png",
                             Currency = "Australian dollar $ (AUD)",
                             FlagImageUrl = "https://cdn.countryflags.com/thumbs/australia/flag-3d-250.png",
@@ -210,16 +217,16 @@ namespace WorldResume.Migrations
                         new
                         {
                             CountryId = 8,
-                            Capital = "Port Moresby",
+                            Capital = "London",
                             ContinentId = 6,
-                            CountryImageUrl = "https://www.jetpunk.com/img/user-photo-library/fc/fcdb10ab1f-450.png",
-                            Currency = "Papua New Guinean kina K (PGK)",
-                            FlagImageUrl = "https://cdn.countryflags.com/thumbs/papua-new-guinea/flag-3d-250.png",
-                            IsCountryOfTheWeek = true,
-                            Languages = "Hiri Motu, Tok Pisin, Papua New Guinean",
-                            Name = "Papua New Guinea",
-                            Population = "6 909 701",
-                            Surface = "462 840 km2"
+                            CountryImageUrl = "~/WorldResume/wwwroot/img/AntarticBritShape.PNG",
+                            Currency = "Pound sterling £ (GBP)",
+                            FlagImageUrl = "~/WorldResume/wwwroot/img/AntarticBrit.png",
+                            IsCountryOfTheWeek = false,
+                            Languages = "English",
+                            Name = "British Antarctic Territory",
+                            Population = "estimate 250",
+                            Surface = "1,709,400 km2"
                         });
                 });
 

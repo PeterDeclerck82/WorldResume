@@ -26,8 +26,8 @@ namespace WorldResume.Models
             modelBuilder.Entity<Continent>().HasData(new Continent { ContinentId = 3, ContinentName = "Europe" });
             modelBuilder.Entity<Continent>().HasData(new Continent { ContinentId = 4, ContinentName = "North-America" });
             modelBuilder.Entity<Continent>().HasData(new Continent { ContinentId = 5, ContinentName = "South-America" });
-            modelBuilder.Entity<Continent>().HasData(new Continent { ContinentId = 6, ContinentName = "Antarctica" });
-            modelBuilder.Entity<Continent>().HasData(new Continent { ContinentId = 7, ContinentName = "Australia" });
+            modelBuilder.Entity<Continent>().HasData(new Continent { ContinentId = 6, ContinentName = "Oceania" });
+
 
             
                 
@@ -92,7 +92,7 @@ namespace WorldResume.Models
                 Currency =          "Australian dollar $ (AUD)",
                 CountryImageUrl =   "https://www.jetpunk.com/img/user-photo-library/ae/ae315bf299-235.png",
                 IsCountryOfTheWeek = true,
-                ContinentId =       7
+                ContinentId =       6
 
             });
 
@@ -125,6 +125,38 @@ namespace WorldResume.Models
                 CountryImageUrl =   "https://www.jetpunk.com/img/user-photo-library/01/013861b705-235.png",
                 IsCountryOfTheWeek = false,
                 ContinentId =       1
+
+            });
+
+            modelBuilder.Entity<Country>().HasData(new Country
+            {
+                CountryId = 7,
+                Name = "Ecuador",
+                Population = "16 290 913",
+                FlagImageUrl = "https://cdn.countryflags.com/thumbs/ecuador/flag-3d-250.png",
+                Capital = "Quito",
+                Languages = "Spanish",
+                Surface = "257 217 km2",
+                Currency = "United States dollar $ (USD)",
+                CountryImageUrl = "https://www.jetpunk.com/img/user-photo-library/2d/2d65bcd234-235.png",
+                IsCountryOfTheWeek = true,
+                ContinentId = 5
+
+            });
+
+            modelBuilder.Entity<Country>().HasData(new Country
+            {
+                CountryId = 8,
+                Name = "Papua New Guinea",
+                Population = "6 909 701",
+                FlagImageUrl = "https://cdn.countryflags.com/thumbs/papua-new-guinea/flag-3d-250.png",
+                Capital = "Port Moresby",
+                Languages = "Hiri Motu, Tok Pisin, Papua New Guinean",
+                Surface = "462 840 km2",
+                Currency = "Papua New Guinean kina K (PGK)",
+                CountryImageUrl = "https://www.jetpunk.com/img/user-photo-library/fc/fcdb10ab1f-450.png",
+                IsCountryOfTheWeek = true,
+                ContinentId = 6
 
             });
 
