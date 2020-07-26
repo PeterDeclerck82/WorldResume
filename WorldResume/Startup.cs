@@ -31,9 +31,13 @@ namespace WorldResume
             {
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
             });
-            
-            services.AddScoped<ICountryRepository,      MockCountryRepository>();
-            services.AddScoped<IContinentRepository,    MockContinentRepository>();
+
+            //services.AddScoped<ICountryRepository,      MockCountryRepository>();
+            //services.AddScoped<IContinentRepository,    MockContinentRepository>();
+
+            services.AddScoped<ICountryRepository,      CountryRepository>();
+            services.AddScoped<IContinentRepository,    ContinentRepository>();
+
             services.AddControllersWithViews(); //implementeren mvc model
 
             
