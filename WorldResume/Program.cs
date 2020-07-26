@@ -14,22 +14,14 @@ namespace WorldResume
     {
         public static void Main(string[] args)
         {
-            BuildWebHost(args).Run();
+            CreateHostBuilder(args).Build().Run();
         }
 
-        public static IWebHost BuildWebHost(string[] args) =>
-            WebHost.CreateDefaultBuilder(args)
-                .ConfigureAppConfiguration(SetupConfiguration)
-                .UseStartup<Startup>()
-                .Build();
-
-
-        private static void SetupConfiguration(WebHostBuilderContext ctx, IConfigurationBuilder builder)
-        {
-            builder.Sources.Clear();
-
-            builder.AddJsonFile("config.json", false, true)
-                    .AddEnvironmentVariables();
-        }
+        public static IHostBuilder CreateHostBuilder(string[] args) =>
+            Host.CreateDefaultBuilder(args)
+                .ConfigureWebHostDefaults(webBuilder =>
+                {
+                    webBuilder.UseStartup<Startup>();
+                });
     }
 }
