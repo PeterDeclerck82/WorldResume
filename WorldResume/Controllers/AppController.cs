@@ -12,33 +12,12 @@ namespace WorldResume.Controllers
 {
     public class AppController : Controller
     {
-        // GET: /<controller>/
-
-        private readonly ICountryRepository _countryRepository;
-        private readonly IContinentRepository _continentRepository;
-
-        public AppController(ICountryRepository countryRepository, IContinentRepository continentRepository)
-        {
-            _countryRepository      = countryRepository;
-            _continentRepository    = continentRepository;
-        }
 
 
-        // GET: /<controller>/
         public IActionResult Index()
         {
-
-            //return View(_pieRepository.AllPies);
-            CountriesListViewModel countriesListViewModel = new CountriesListViewModel();
-            countriesListViewModel.Countries= _countryRepository.AllCountries;
-
-            countriesListViewModel.CurrentCategory = "Europe";
-            return View(countriesListViewModel);
+            return View();
         }
-        //public IActionResult Index()
-        //{
-        //    return View();
-        //}
 
 
         [HttpGet("contact")]
@@ -70,5 +49,6 @@ namespace WorldResume.Controllers
 
             return View();
         }
+
     }
 }

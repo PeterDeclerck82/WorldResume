@@ -1,0 +1,31 @@
+﻿
+@model CountriesListViewModel
+
+<h1>@Model.CurrentCategory</h1>
+<div class="row text-left">
+
+
+
+    @foreach (var country in Model.Countries)
+    {
+        <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card h-100 text-white bg-dark mb-3" style="border-radius: 30px;">
+                <img class="card-img-top p-2" src="@country.FlagImageUrl" alt="Card image cap">
+                <div class="card-body">
+
+                    <h5 class="card-title">
+                        <a asp-controller="Country" asp-action="Details" asp-route-id="@country.CountryId">@country.Name</a>
+                    </h5>
+                    
+                </div>
+            </div>
+        </div>
+
+    }
+
+
+
+
+
+
+</div>

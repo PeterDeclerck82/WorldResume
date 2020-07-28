@@ -65,15 +65,13 @@ namespace WorldResume
 
             app.UseRouting();
 
-            app.UseEndpoints(cfg =>
+            app.UseEndpoints(endpoints =>
             {
-                cfg.MapControllerRoute("Fallback",
-                    "{controller}/{action}/{id?}",
-                    new { controller = "App", action = "Index" });
-
-                //dit geeft de standaard te volgen route aan
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=App}/{action=Index}/{id?}");
             });
-            
+
         }
     }
 }
