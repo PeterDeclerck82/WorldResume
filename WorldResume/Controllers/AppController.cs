@@ -48,6 +48,7 @@ namespace WorldResume.Controllers
 
             return View();
         }
+
         [HttpPost("contact")]
         public IActionResult Contact(ContactViewModel model)
         {
