@@ -20,6 +20,7 @@ namespace WorldResume.Models
         public bool IsCountryOfTheWeek { get; set; }
 
         public int ContinentId { get; set; }
+        public string Wallpaper { get; set; }
         public Continent Continent { get; set; }
 
 

@@ -1,26 +1,76 @@
 ﻿
 @model Country
+<!-- Card -->
+    <div class="card card-cascade wider reverse text-white bg-dark mb-3" style="border-radius: 30px;">
 
+        <!-- Card image -->
+        <div class="view view-cascade overlay">
+            <div>
+                <img class="position-absolute p-2 m-2" src="@Model.FlagImageUrl" alt="Card image cap">
+                <img class="card-img-top" style="border-radius: 30px;" src="@Model.Wallpaper"
+                     alt="Card image cap">
+                <a href="#!">
+                    <div class="mask rgba-white-slight"></div>
+                </a>
+            </div>
+            
+        </div>
 
+        <!-- Card content -->
+        <div class="card-body card-body-cascade text-left" style="border-radius: 30px;">
 
-<div class="col-lg-3 col-md-6 mb-4">
-    <div class="card h-100 text-white bg-dark mb-3" style="border-radius: 30px;">
-        <img class="card-img-top p-2" src="@Model.FlagImageUrl" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">@Model.Name</h5>
-            <p class="card-text">
-                <ul class="list-group list-group-flush text-white bg-dark mb-3">
-                    <li class="list-group-item text-white bg-dark mb-3">population:  <br>  @Model.Population              </li>
-                    <li class="list-group-item text-white bg-dark mb-3">capital:     <br>  @Model.Capital                 </li>
-                    <li class="list-group-item text-white bg-dark mb-3">languages:   <br>  @Model.Languages               </li>
-                    <li class="list-group-item text-white bg-dark mb-3">surface:     <br>  @Model.Surface                 </li>
-                    <li class="list-group-item text-white bg-dark mb-3">currency:    <br>  @Model.Currency                </li>
-                </ul>
-            </p>
-            <img class="card-img-bottom" src="@Model.CountryImageUrl" alt="Card image cap">
+            <!-- Title -->
+            <h4 class="card-title m-2"><strong>@Model.Name</strong></h4>
+                    <div id="map-container-google-9" class="z-depth-1-half map-container-5 float-right" style="border:0" allowfullscreen>
+                        <iframe src="@Model.CountryImageUrl" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+
+            <!-- Text -->
+                <p class="card-text">
+                    <ul class="list-group list-group-flush text-white bg-dark mb-3">
+                        <li class="list-group-item text-white bg-dark mb-3">population:    @Model.Population              </li>
+                        <li class="list-group-item text-white bg-dark mb-3">capital:       @Model.Capital                 </li>
+                        <li class="list-group-item text-white bg-dark mb-3">languages:     @Model.Languages               </li>
+                        <li class="list-group-item text-white bg-dark mb-3">surface:       @Model.Surface                 </li>
+                        <li class="list-group-item text-white bg-dark mb-3">currency:      @Model.Currency                </li>
+                    </ul>
+                </p>
         </div>
         <div class="card-footer">
             <button class="btn btn-success" id="addButton">Add to collection</button>
         </div>
+
     </div>
-</div>
+
+
+
+
+
+
+
+
+@*back up card*@
+
+
+<!-- Card -->
+@*<div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-white bg-dark mb-3" style="border-radius: 30px;">
+            <img class="card-img-top p-2" src="@Model.FlagImageUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@Model.Name</h5>
+                <p class="card-text">
+                    <ul class="list-group list-group-flush text-white bg-dark mb-3">
+                        <li class="list-group-item text-white bg-dark mb-3">population:  <br>  @Model.Population              </li>
+                        <li class="list-group-item text-white bg-dark mb-3">capital:     <br>  @Model.Capital                 </li>
+                        <li class="list-group-item text-white bg-dark mb-3">languages:   <br>  @Model.Languages               </li>
+                        <li class="list-group-item text-white bg-dark mb-3">surface:     <br>  @Model.Surface                 </li>
+                        <li class="list-group-item text-white bg-dark mb-3">currency:    <br>  @Model.Currency                </li>
+                    </ul>
+                </p>
+                <img class="card-img-bottom" src="@Model.CountryImageUrl" alt="Card image cap">
+            </div>
+            <div class="card-footer">
+                <button class="btn btn-success" id="addButton">Add to collection</button>
+            </div>
+        </div>
+    </div>*@
