@@ -1,99 +1,123 @@
-﻿<h1>Home</h1>
+﻿@model AppViewModel
 
-@*@{
-    ViewBag.Title = "Home Page";
-}
+<partial name="_Carousel" />
+<br />
+<h2>Countries of the week</h2>
+<br />
+<h5>click on the country-name to see more details!      Take a look in the List to discover all the countries.</h5>
+<br />
 
-@model CountriesListViewModel
+<div class="row">
 
-    <div class="row text-left">
+    @foreach (var country in Model.CountriesOfTheWeek)
+    {
+        <partial name="_CountryCard" model="country" />
+    }
 
-
-
-        @foreach (var country in Model.Countries)
-        {
-        <div                    class="col-lg-3 col-md-6 mb-4">
-            <div                class="card h-100 text-white bg-dark mb-3" style="border-radius: 30px;">                
-                <img            class="card-img-top p-2" src="@country.FlagImageUrl" alt="Card image cap">                
-                <div            class="card-body">
-                    <h5         class="card-title">@country.Name</h5>
-                    <p          class="card-text">
-                        <ul     class="list-group list-group-flush text-white bg-dark mb-3">
-                            <li class="list-group-item text-white bg-dark mb-3">population:  <br>  @country.Population              </li>
-                            <li class="list-group-item text-white bg-dark mb-3">continent:   <br>  @country.Continent.ContinentName </li>
-                            <li class="list-group-item text-white bg-dark mb-3">capital:     <br>  @country.Capital                 </li>
-                            <li class="list-group-item text-white bg-dark mb-3">languages:   <br>  @country.Languages               </li>
-                            <li class="list-group-item text-white bg-dark mb-3">surface:     <br>  @country.Surface                 </li>
-                            <li class="list-group-item text-white bg-dark mb-3">currency:    <br>  @country.Currency                </li>
-                        </ul>
-                    </p>
-                    <img        class="card-img-bottom" src="@country.CountryImageUrl" alt="Card image cap">                   
-                </div>
-                <div            class="card-footer">
-                    <button     class="btn btn-success" id="addButton" >Add to collection</button>
-                </div>
-            </div>
-        </div>
-
-        }
-
-           
-
-
-
-
-    </div>
-
-<div id="theForm">
-    <form>
-        <label>Username: </label>
-        <br />
-        <input />
-        <br />
-
-        <label>Email: </label>
-        <br />
-        <input type="email" />
-        <br />
-
-        <label>Subject: </label>
-        <br />
-        <input type="text" />
-        <br />
-
-        <label>Message: </label>
-        <br />
-        <textarea rows="4"></textarea>
-        <br />
-
-        <input type="submit" value="Send message" />
-
-    </form>
 </div>
 
-<div>
-    <div id="loginToggle">Login (click to hide/show)</div>
-    <form class="popup-form">
 
-        <div>
-            <label>Username</label>
+
+
+
+
+
+
+
+@*@{
+        ViewBag.Title = "Home Page";
+    }
+
+    @model CountriesListViewModel
+
+        <div class="row text-left">
+
+
+
+            @foreach (var country in Model.Countries)
+            {
+            <div                    class="col-lg-3 col-md-6 mb-4">
+                <div                class="card h-100 text-white bg-dark mb-3" style="border-radius: 30px;">
+                    <img            class="card-img-top p-2" src="@country.FlagImageUrl" alt="Card image cap">
+                    <div            class="card-body">
+                        <h5         class="card-title">@country.Name</h5>
+                        <p          class="card-text">
+                            <ul     class="list-group list-group-flush text-white bg-dark mb-3">
+                                <li class="list-group-item text-white bg-dark mb-3">population:  <br>  @country.Population              </li>
+                                <li class="list-group-item text-white bg-dark mb-3">continent:   <br>  @country.Continent.ContinentName </li>
+                                <li class="list-group-item text-white bg-dark mb-3">capital:     <br>  @country.Capital                 </li>
+                                <li class="list-group-item text-white bg-dark mb-3">languages:   <br>  @country.Languages               </li>
+                                <li class="list-group-item text-white bg-dark mb-3">surface:     <br>  @country.Surface                 </li>
+                                <li class="list-group-item text-white bg-dark mb-3">currency:    <br>  @country.Currency                </li>
+                            </ul>
+                        </p>
+                        <img        class="card-img-bottom" src="@country.CountryImageUrl" alt="Card image cap">
+                    </div>
+                    <div            class="card-footer">
+                        <button     class="btn btn-success" id="addButton" >Add to collection</button>
+                    </div>
+                </div>
+            </div>
+
+            }
+
+
+
+
+
+
+        </div>
+
+    <div id="theForm">
+        <form>
+            <label>Username: </label>
+            <br />
             <input />
-        </div>
-        <br />
-        <div>
-            <label>Password</label>
-            <input type="password" />
-        </div>
-        <br />
-        <div>
-            <input type="checkbox" />
-            <label>Remember me?</label>
-        </div>
-        <br />
-        <div>
-            <input type="submit" value="Login" />
-        </div>
+            <br />
+
+            <label>Email: </label>
+            <br />
+            <input type="email" />
+            <br />
+
+            <label>Subject: </label>
+            <br />
+            <input type="text" />
+            <br />
+
+            <label>Message: </label>
+            <br />
+            <textarea rows="4"></textarea>
+            <br />
+
+            <input type="submit" value="Send message" />
+
+        </form>
+    </div>
+
+    <div>
+        <div id="loginToggle">Login (click to hide/show)</div>
+        <form class="popup-form">
+
+            <div>
+                <label>Username</label>
+                <input />
+            </div>
+            <br />
+            <div>
+                <label>Password</label>
+                <input type="password" />
+            </div>
+            <br />
+            <div>
+                <input type="checkbox" />
+                <label>Remember me?</label>
+            </div>
+            <br />
+            <div>
+                <input type="submit" value="Login" />
+            </div>
 
 
-    </form>
-</div>*@
+        </form>
+    </div>*@

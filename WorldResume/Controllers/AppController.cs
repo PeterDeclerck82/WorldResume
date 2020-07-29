@@ -14,10 +14,24 @@ namespace WorldResume.Controllers
     {
 
 
+
+        private readonly ICountryRepository _countryRepository;
+
+        public AppController(ICountryRepository countryRepository)
+        {
+            _countryRepository = countryRepository;
+        }
+
         public IActionResult Index()
         {
-            return View();
+            var appViewModel = new AppViewModel
+            {
+                CountriesOfTheWeek = _countryRepository.CountriesOfTheWeek
+            };
+
+            return View(appViewModel);
         }
+
 
 
         [HttpGet("contact")]
@@ -27,6 +41,8 @@ namespace WorldResume.Controllers
 
             return View();
         }
+
+
 
         [HttpPost("contact")]
         public IActionResult Contact(ContactViewModel model)

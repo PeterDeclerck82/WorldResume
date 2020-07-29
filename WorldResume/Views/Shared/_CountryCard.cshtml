@@ -1,0 +1,17 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model Country
+
+    <div class="col-lg-3 col-md-6 mb-4">
+        <div class="card h-100 text-white bg-dark mb-3" style="border-radius: 30px;">
+            <img class="card-img-top p-2" src="@Model.FlagImageUrl" alt="Card image cap">
+            <div class="card-body">
+
+                <h5 class="card-title">
+                    <a asp-controller="Country" asp-action="Details" asp-route-id="@Model.CountryId">@Model.Name</a>
+                </h5>
+
+            </div>
+        </div>
+    </div>
