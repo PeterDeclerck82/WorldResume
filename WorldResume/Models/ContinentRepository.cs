@@ -14,12 +14,6 @@ namespace WorldResume.Models
             _appDbContext = appDbContext;
         }
 
-        public IEnumerable<Continent> AllContinents
-        {
-            get
-            {
-                return _appDbContext.Continents;
-            }
-        }
+        public IEnumerable<Continent> AllContinents => _appDbContext.Continents;
     }
 }

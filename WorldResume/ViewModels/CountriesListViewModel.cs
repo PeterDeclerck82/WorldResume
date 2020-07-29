@@ -9,6 +9,6 @@ namespace WorldResume.ViewModels
     public class CountriesListViewModel
     {
         public IEnumerable<Country> Countries { get; set; }
-        public string CurrentCategory { get; set; }
+        public string CurrentContinent { get; set; }
     }
 }

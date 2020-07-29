@@ -1,0 +1,21 @@
+﻿@model IEnumerable<Continent>
+
+<li class="dropdown nav-item">
+    <a asp-controller="Country"
+       asp-action="Index"
+       class="dropdown-toggle nav-link" data-toggle="dropdown">Countries<b class="caret"></b></a>
+    <ul class="dropdown-menu bg-dark mb-3 text-center">
+        @foreach (var continent in Model)
+        {
+            <li class="text-white bg-dark mb-3">
+                <a  asp-controller="Country" asp-action="List"
+                   asp-route-continent="@continent.ContinentName">@continent.ContinentName</a>
+            </li>
+        }
+        <li class="divider"></li>
+        <li>
+            <a  asp-controller="Country" asp-action="List" asp-route-Continent="">View all countries</a>
+        </li>
+    </ul>
+</li>
+

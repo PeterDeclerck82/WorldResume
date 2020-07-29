@@ -30,13 +30,15 @@ namespace WorldResume
             services.AddDbContext<AppDbContext>(options =>
             
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
-            
 
             //services.AddScoped<ICountryRepository,      MockCountryRepository>();
             //services.AddScoped<IContinentRepository,    MockContinentRepository>();
 
             services.AddScoped<ICountryRepository,      CountryRepository>();
             services.AddScoped<IContinentRepository,    ContinentRepository>();
+
+            services.AddHttpContextAccessor();
+            services.AddSession();
 
             services.AddControllersWithViews(); //implementeren mvc model
             
@@ -54,10 +56,7 @@ namespace WorldResume
             {
                 app.UseDeveloperExceptionPage();  //geeft de foutpagina enkel weer voor de developer
             }
-            else
-            {
-                app.UseExceptionHandler("/error");
-            }
+
 
             app.UseHttpsRedirection();
             app.UseStaticFiles();
