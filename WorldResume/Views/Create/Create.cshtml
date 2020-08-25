@@ -1,0 +1,82 @@
+﻿@model WorldResume.Models.Country
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Country</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Name" class="control-label"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Population" class="control-label"></label>
+                <input asp-for="Population" class="form-control" />
+                <span asp-validation-for="Population" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="FlagImageUrl" class="control-label"></label>
+                <input asp-for="FlagImageUrl" class="form-control" />
+                <span asp-validation-for="FlagImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Capital" class="control-label"></label>
+                <input asp-for="Capital" class="form-control" />
+                <span asp-validation-for="Capital" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Languages" class="control-label"></label>
+                <input asp-for="Languages" class="form-control" />
+                <span asp-validation-for="Languages" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Surface" class="control-label"></label>
+                <input asp-for="Surface" class="form-control" />
+                <span asp-validation-for="Surface" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Currency" class="control-label"></label>
+                <input asp-for="Currency" class="form-control" />
+                <span asp-validation-for="Currency" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CountryImageUrl" class="control-label"></label>
+                <input asp-for="CountryImageUrl" class="form-control" />
+                <span asp-validation-for="CountryImageUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsCountryOfTheWeek" /> @Html.DisplayNameFor(model => model.IsCountryOfTheWeek)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="ContinentId" class="control-label"></label>
+                <select asp-for="ContinentId" class ="form-control" asp-items="ViewBag.ContinentId"></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Wallpaper" class="control-label"></label>
+                <input asp-for="Wallpaper" class="form-control" />
+                <span asp-validation-for="Wallpaper" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

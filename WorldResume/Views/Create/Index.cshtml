@@ -1,0 +1,94 @@
+﻿@model IEnumerable<WorldResume.Models.Country>
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+<p>
+    <a asp-action="Create">Create a new country</a>
+</p>
+<table class="table text-white">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Population)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FlagImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capital)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Languages)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Surface)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CountryImageUrl)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsCountryOfTheWeek)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Wallpaper)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Continent)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Population)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FlagImageUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capital)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Languages)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Surface)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CountryImageUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsCountryOfTheWeek)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Wallpaper)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Continent.ContinentId)
+            </td>
+            <td><br>
+                <a asp-action="Edit" asp-route-id="@item.CountryId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.CountryId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.CountryId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

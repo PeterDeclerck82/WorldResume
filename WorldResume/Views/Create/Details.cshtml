@@ -1,4 +1,11 @@
-﻿@model Country
+﻿@model WorldResume.Models.Country
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
 <!-- Card -->
 <div class="card card-cascade wider reverse text-white bg-dark mb-3" style="border-radius: 30px;">
 
@@ -37,4 +44,8 @@
     </div>
 
 
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.CountryId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
 </div>
